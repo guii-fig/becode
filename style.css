@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* Home Page*/
+#home {
+    display: flex;
+}
+
+#desktop-welcome {
+    width: 43%;
+    height: 100vh;
+    background: radial-gradient(circle at top left, #1c6be2, #163a74, #0c192e, #060c18, #030919);
+    justify-items: center;
+    align-content: center;
+    
+}   
+
+#welcome {
+    width: 90%;
+    height: 90%;
+    justify-content: center; 
+}
+
+#logo {
+    margin-top: 40px;
+    width: 60%;
+    height: 52px;
+    display: flex;
+    align-items: center;
+}
+
+#logo img {
+    width:  15%;
+    height: 100%;
+    border-radius: 10%;
+}
+
+#logo span {
+    margin-left: 15px;
+    color: antiquewhite;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#welcome-text {
+    width: 80%;
+    height: 30%;
+    margin-top: 30%;
+    color: antiquewhite;
+    align-content: center;
+    font-weight: lighter;
+}
+
+#welcome-text h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+#bubbles-box {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+.bubbles {
+    width: 28%;
+    padding: 5px;
+    background-color: rgba(136, 136, 136, 0.242);
+    border-radius: 8px;
+    font-size: 15px;
+    text-align: center;
+    font-weight: normal;
+}
+
+#copy {
+    margin-top: 30%;
+    color: antiquewhite;
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+/* lado direito */
+
+#forms-container {
+    width: 57%;
+    height: 100vh;
+    background-color: #060a16;
+    justify-items: center;
+    align-content: center;
+}
+
+#forms {
+    width: 50%;
+    height: 70%;
+    color: antiquewhite;
+    justify-items: center;
+    background-color: #0a111f;
+    border-radius: 10px;
+    padding-top: 40px;
+}
+
+#forms.ativo {
+    height: 90%;
+}
+
+#forms p {
+    font-weight: lighter;
+    margin-top: 5px;
+}
+
+#selection { 
+    width: 90%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #0c192e;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.select-btn {
+    width: 45%;
+    height: 30px;
+    border-radius: 8px;
+    border: none;
+    background-color: #0c192e;
+    color: #9ca3af;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.select-btn:hover {
+    cursor: pointer;
+}
+
+.ativo{
+    background-color: #030919;
+    color: antiquewhite;
+}
+
+/*formularios*/
+.form {
+    margin-top: 20px;
+    width: 90%;
+    height: 60%;
+    justify-items: center;
+    background-color: #0a111f;
+    display: none;
+}
+
+.form input {
+    width: 95%;
+    height: 10%;
+    margin-top: 7px;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    background-color: #030919;
+    color: antiquewhite;
+}
+
+.form.ativo {
+    display: block;
+}
+
+.btn-submit {
+    width: 97%;
+    height: 15%;
+    background-color: #1c6be2;
+    color: antiquewhite;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.btn-submit:hover {
+    cursor: pointer;
+    background-color: #163a74;
+}
+
+
+@media screen and (max-width: 960px) {
+    
+    #desktop-welcome {
+        display: none;
+    }
+
+    #forms-container {
+        width: 100%;
+    }
+}

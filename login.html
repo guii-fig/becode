@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeCode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="home">
+
+    <aside id="desktop-welcome">
+        <main id="welcome">
+            <div id="logo">
+                <img src="./logo.png" alt="BeCode">
+                <span>BeCode</span>
+            </div>
+            <div id="welcome-text">
+                <h2>Atendimento que gera conexões</h2>
+                <p>Catálogo, pedidos sob encomenda, agenda integrada com Google Calendar e atendimento 
+                inteligente no WhatsApp — em um só lugar.</p>
+                <span id="bubbles-box">
+                    <div class="bubbles">Agenda</div>
+                    <div class="bubbles">Catálogo</div>
+                    <div class="bubbles">WhatsApp AI</div>
+                </span>
+            </div>
+            <p id="copy">&copy; 2026 BeCode</p>
+        </main>
+    </aside>
+
+    <!--Lado direito do site-->
+    <div id="forms-container">
+        <main id="forms" class="">
+            <h2>Acesse sua conta</h2>
+            <p>Gerencie pedidos e agendamentos</p>
+
+            <div id="selection">
+                <button id="login" class="select-btn ativo">Login</button>
+                <button id="create-account" class="select-btn">Criar Conta</button>
+            </div>
+            
+            <form id="form-login" class="form ativo">
+                <label for="email" class="label-form">Email</label><br>
+                <input type="email" name="email" id="email" placeholder="voce@empresa.com"><br>
+                <label for="password" class="label-form">Senha</label><br>
+                <input type="password" name="passowrd" id="password" placeholder="••••••••"><br>
+                <button class="btn-submit">Entrar</button>
+            </form>
+
+            <form id="form-create" class="form">
+                <label for="name" class="label-form">Nome do negócio</label><br>
+                <input type="text" name="name" id="name" placeholder="Barbearia do João"><br>
+                <label for="name" class="label-form">Seu nome</label><br>
+                <input type="text" name="name" id="name" placeholder="João da Silva"><br>
+                <label for="email" class="label-form">Email</label><br>
+                <input type="email" name="email" id="email" placeholder="voce@empresa.com"><br>
+                <label for="password" class="label-form">Senha</label><br>
+                <input type="password" name="passowrd" id="password" placeholder="••••••••"><br>
+                <button class="btn-submit">Entrar</button>
+            </form>
+        </main>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
+
