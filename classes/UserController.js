@@ -41,8 +41,9 @@ export class UserController {
         return true;
     }
 
+    //método de validação do usuário
     authenticateUser(email, password) {
-        const normalizedEmail = String(email).trim().toLocaleLowerCase();
+        const normalizedEmail = String(email).trim().toLocaleLowerCase(); //normaliza o email para letras minúsculas
 
         return this.userInfo.find(user => {
             return String(user.email).trim().toLocaleLowerCase() === normalizedEmail

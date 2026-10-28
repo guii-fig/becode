@@ -14,18 +14,23 @@
             <span id="span-name">
                 
             </span>
-        <nav>
+            <nav>
             <ul>
-                <li class="options">Pedidos</li>
-                <li class="options">Catálogo</li>
-                <li class="options">Financeiro</li>
-                <li class="options">Configurações</li>
+                <li class="options" id="orders">Pedidos</li>
+                <li class="options" id="catalog">Catálogo</li>
+                <li class="options" id="finance">Financeiro</li>
+                <li class="options" id="settings">Configurações</li>
             </ul>
-        </nav>
+            </nav>
         </div>
     </aside>
 
-    <main id="orders" class="options-page ativo"></main>
+    <main id="main-page" class="open">
+        <div id="orders-page" class="show">
+            
+        </div>
+        <div id="catalog-page" class="show-off">Catálogo</div>
+    </main>
     <script src="../js/home.js"></script>
 </body>
 </html>

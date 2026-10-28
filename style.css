@@ -8,11 +8,11 @@
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    color: antiquewhite;
 }
 
 .body {
     background-color: #0a111f;
-    height: 100vh;
 }
 /* Home Page*/
 #home {
@@ -50,7 +50,6 @@
 
 #logo span {
     margin-left: 15px;
-    color: antiquewhite;
     font-size: 20px;
     font-weight: bold;
 }
@@ -59,7 +58,6 @@
     width: 80%;
     height: 30%;
     margin-top: 30%;
-    color: antiquewhite;
     align-content: center;
     font-weight: lighter;
 }
@@ -88,7 +86,6 @@
 
 #copy {
     margin-top: 20%;
-    color: antiquewhite;
     font-size: 12px;
     font-weight: lighter;
 }
@@ -106,7 +103,6 @@
 #forms {
     width: 50%;
     height: 70%;
-    color: antiquewhite;
     justify-items: center;
     background-color: #0a111f;
     border-radius: 10px;
@@ -139,7 +135,6 @@
     border-radius: 8px;
     border: none;
     background-color: #0c192e;
-    color: #9ca3af;
     font-weight: bold;
     transition: all 0.3s ease;
 }
@@ -150,7 +145,6 @@
 
 .ativo{
     background-color: #030919;
-    color: antiquewhite;
 }
 
 /*formularios*/
@@ -172,7 +166,6 @@
     border-radius: 8px;
     border: none;
     background-color: #030919;
-    color: antiquewhite;
 }
 
 .form.ativo {
@@ -183,7 +176,6 @@
     width: 97%;
     height: 53px;
     background-color: #1c6be2;
-    color: antiquewhite;
     border: none;
     border-radius: 8px;
     font-weight: bold;
@@ -240,7 +232,6 @@
 #menu.ativo{
     width: 15%;
     height: 100vh;
-    color: #faebd7;
     justify-items: center;
     transform: translateX(0);
     
@@ -279,6 +270,35 @@
     cursor: pointer;
     background-color: #0c192e;
     border-radius: 8px;
+}
+
+/*MAIN PAGE*/
+.open {
+    position: fixed;
+    left: 10%;
+    top: 40px;
+    width: 85%;
+    height: 90vh;
+    background-color: #060c18;
+    border-radius: 10px;
+}
+.closed{
+    position: fixed;
+    left: 20%;
+    top: 40px;
+    width: 75%;
+    height: 90vh;
+    background-color: #060c18;
+    border-radius: 10px;
+}
+
+/*Página das opções*/
+
+.show {
+    display: block;
+}
+.show-off {
+    display: none;
 }
 
 @media screen and (max-width: 1025px) {
