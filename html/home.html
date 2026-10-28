@@ -16,7 +16,7 @@
             </span>
             <nav>
             <ul>
-                <li class="options" id="orders">Pedidos</li>
+                <li class="options" id="orders">Agendamentos</li>
                 <li class="options" id="catalog">Catálogo</li>
                 <li class="options" id="finance">Financeiro</li>
                 <li class="options" id="settings">Configurações</li>
@@ -27,7 +27,65 @@
 
     <main id="main-page" class="open">
         <div id="orders-page" class="show">
+            <div id="container-orders">
+                <div>
+                    <h1>Agendamentos</h1>
+                    <p>Gestão de agendamentos</p>
+                </div>
+                <button id="new-order">+ Novo Agendamento</button>
+            </div>
             
+            <section>
+                <input type="search" name="search" id="search" class="filter" placeholder="Busce por código, nome ou atendimento">
+                <select name="select-filter" id="select-filter" class="filter">
+                    <option value="all" >Todos os agendamentos</option>
+                    <option value="all" >Novo</option>
+                    <option value="all" >Confirmado</option>
+                    <option value="all" >Cancelado</option>
+                </select>
+            </section>
+            <div id="order-table">
+                <section class="plates">
+                    <span id="service">
+                        <H4>Cabelo + Barba</H4>
+                        <p class="status cancelado">Cancelado</p>
+                    </span>
+                    <p>Cód: 001</p>
+                    <p>Cliente: Rodrigo Santoro</p>
+                    <p>Tel: (99) 91122-3344</p>
+                    <p>Data: 01/01/1990</p>
+                    <button class="btn-edit">Editar</button>
+                    <button class="btn-delete">Cancelar</button>
+                </section>
+
+                <section class="plates">
+                    <span id="service">
+                        <H4>Cabelo + Barba</H4>
+                        <p class="status confirmado">Confirmado</p>
+                    </span>
+                    <p>Cód: 001</p>
+                    <p>Cliente: Rodrigo Santoro</p>
+                    <p>Tel: (99) 91122-3344</p>
+                    <p>Data: 01/01/1990</p>
+                    <button class="btn-edit">Editar</button>
+                    <button class="btn-delete">Cancelar</button>
+                </section>
+
+                <section class="plates">
+                    <span id="service">
+                        <H4>Cabelo + Barba</H4>
+                        <p class="status novo">Novo</p>
+                    </span>
+                    <p>Cód: 001</p>
+                    <p>Cliente: Rodrigo Santoro</p>
+                    <p>Tel: (99) 91122-3344</p>
+                    <p>Data: 01/01/1990</p>
+                    <button class="btn-edit">Editar</button>
+                    <button class="btn-delete">Cancelar</button>
+                </section>
+
+                
+            </div>
         </div>
         <div id="catalog-page" class="show-off">Catálogo</div>
     </main>
