@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeCode</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body id="home">
 
     <aside id="desktop-welcome">
         <main id="welcome">
             <div id="logo">
-                <img src="./logo.png" alt="BeCode">
+                <img src="../logo.png" alt="BeCode">
                 <span>BeCode</span>
             </div>
             <div id="welcome-text">
@@ -41,27 +41,26 @@
             <!--Formulário de login-->
             <form id="form-login" class="form ativo">
                 <label for="email-login" class="label-form">Email</label><br>
-                <input type="email-login" name="email-login" id="email-login" placeholder="voce@empresa.com"><br>
+                <input type="email" name="email-login" id="email-login" placeholder="voce@empresa.com" required><br>
                 <label for="password-login" class="label-form">Senha</label><br>
-                <input type="password" name="passowrd-login" id="password-login" placeholder="••••••••"><br>
-                <button class="btn-submit" id="btn-login">Entrar</button>
+                <input type="password" name="password-login" id="password-login" placeholder="••••••••" required><br>
+                <button class="btn-submit" id="btn-login" type="submit">Entrar</button>
             </form>
             <!--Formulário para criar conta-->
             <form id="form-create" class="form">
                 <label for="bss-name" class="label-form">Nome do negócio</label><br>
-                <input type="text" name="bss-name" id="bss-name" placeholder="Barbearia do João"><br>
+                <input type="text" name="bss-name" id="bss-name" placeholder="Barbearia do João" required><br>
                 <label for="name" class="label-form">Seu nome</label><br>
-                <input type="text" name="name" id="name" placeholder="João da Silva"><br>
+                <input type="text" name="name" id="name" placeholder="João da Silva" required><br>
                 <label for="email" class="label-form">Email</label><br>
-                <input type="email" name="email" id="email" placeholder="voce@empresa.com"><br>
+                <input type="email" name="email" id="email" placeholder="voce@empresa.com" required><br>
                 <label for="password" class="label-form">Senha</label><br>
-                <input type="password" name="passowrd" id="password" placeholder="••••••••"><br>
-                <button class="btn-submit" id="btn-create">Entrar</button>
+                <input type="password" name="password" id="password" placeholder="••••••••" required><br>
+                <button class="btn-submit" id="btn-create" type="submit">Criar conta</button>
             </form>
         </main>
     </div>
 
-    <script src="./index.js"></script>
+    <script type="module" src="../js/login.js"></script>
 </body>
 </html>
-
