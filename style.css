@@ -313,7 +313,7 @@
     border-radius: 8px;
     border: none;
     background-color: #030919;
-    border: solid 2px antiquewhite;
+    border: solid 0.1px antiquewhite;
 }
 
 #container-orders {
@@ -349,6 +349,7 @@
     width: 25%;
     height: auto;
     padding: 15px;
+    border: solid 2px #0c192e;
 }
 
 .btn-edit{
