@@ -30,3 +30,43 @@ btnCriar.addEventListener('click', () => {
   formEntrar.classList.remove('ativo');
   formContainer.classList.add('ativo');
 });
+
+//cria o usuário
+
+const users = JSON.parse(localStorage.getItem('users') || '[]');
+
+document.getElementById('btn-create').addEventListener('click', e => {
+  e.preventDefault();
+
+  const bssName = document.getElementById('bss-name').value.trim();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const password = document.getElementById('password').value;
+
+  if(!bssName || !name || !email || !password) {
+    alert('Preencha todos os campos!');
+    return;
+  }
+
+  const user = {bssName, name, email, password};
+  users.push(user);
+  localStorage.setItem('users', JSON.stringify(users));
+  alert('Conta criada com sucesso!');
+});
+
+//valida o usuário
+
+document.getElementById('btn-login').addEventListener('click', e => {
+  e.preventDefault();
+
+  const loginEmail = document.getElementById('email-login').value.trim();
+  const loginPassword = document.getElementById('password-login').value;
+
+  const existe = users.some(usuario => usuario.email === loginEmail && usuario.password === loginPassword);
+  if(existe) {
+    window.location.href = 'home.html';
+  }
+  else {
+    alert('Usuário inválido! Verifique as informações de login e tente novamente');
+  }
+});
