@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --azul-primario: #1c6be2;
+    --azul-hover: #163a74;
+    --fundo-escuro: #030919;
+    --fundo-lateral: #060a16;
+    --fundo-card: #0a111f;
+    --fundo-medio: #0c192e;
+    --texto: antiquewhite;
+    --vermelho: #9c1212;
+    --vermelho-hover: #670c0c;
+    --verde: #166e16;
+}
+
+/* Reset: só o que realmente precisa valer para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Fonte e cor ficam no body e são herdadas pelos elementos */
+body {
+    background-color: var(--fundo-card);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: var(--texto);
+}
+
+/* Controles de formulário não herdam fonte/cor por padrão */
+button,
+input,
+select {
+    font-family: inherit;
+    color: inherit;
+}

@@ -1,79 +1,62 @@
+import { escapeHtml } from "./utils/escapeHtml.js";
 
-const btnMenu = document.getElementById('btn-menu');
-const menu = document.getElementById('menu');
-const infoMenu = document.getElementById('bss-info');
-const btnClose = document.getElementById('btn-close');
-const page = document.getElementById('main-page')
+// Proteção da página: sem usuário logado, volta para o login
+const savedUser = localStorage.getItem('currentUser');
 
-btnMenu.addEventListener('click', e => {
-    menu.classList.add('ativo');
-    infoMenu.classList.add('ativo');
-    btnClose.classList.add('ativo');
-    btnMenu.classList.remove('ativo');
-    page.classList.remove('open');
-    page.classList.add('closed');
-});
+if (!savedUser) {
+    window.location.href = 'login.html';
+} else {
+    init(JSON.parse(savedUser));
+}
 
-btnClose.addEventListener('click', e => {
-    menu.classList.remove('ativo');
-    infoMenu.classList.remove('ativo');
-    btnClose.classList.remove('ativo');
-    btnMenu.classList.add('ativo');
-    page.classList.add('open');
-    page.classList.remove('closed');
-
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const savedUser = localStorage.getItem('currentUser');
+function init(user) {
+    // Dados do usuário no menu
     const bloco = document.getElementById('span-name');
-
-    if (!savedUser) {
-        window.location.href = 'login.html';
-        return;
-    }
-
-    const user = JSON.parse(savedUser);
-    const bssName = String(user.bssName ?? '');
-    const name = String(user.name ?? '');
-    const escapeHtml = value => value.replace(/[&<>"']/g, character => ({
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        '"': '&quot;',
-        "'": '&#39;'
-    })[character]);
-
     bloco.innerHTML = `
-        <h4>${escapeHtml(bssName)}</h4>
-        <p>Seja bem-vindo(a), ${escapeHtml(name)}!</p>
+        <h4>${escapeHtml(user.bssName ?? '')}</h4>
+        <p>Seja bem-vindo(a), ${escapeHtml(user.name ?? '')}!</p>
     `;
-});
 
+    // Abrir e fechar o menu
+    const btnMenu = document.getElementById('btn-menu');
+    const btnClose = document.getElementById('btn-close');
+    const menu = document.getElementById('menu');
+    const infoMenu = document.getElementById('bss-info');
+    const page = document.getElementById('main-page');
 
-//options page
+    btnMenu.addEventListener('click', () => {
+        menu.classList.add('ativo');
+        infoMenu.classList.add('ativo');
+        btnClose.classList.add('ativo');
+        btnMenu.classList.remove('ativo');
+        page.classList.remove('open');
+        page.classList.add('closed');
+    });
 
-const pedidos = document.getElementById('orders');
-const pedidosPage = document.getElementById('orders-page');
+    btnClose.addEventListener('click', () => {
+        menu.classList.remove('ativo');
+        infoMenu.classList.remove('ativo');
+        btnClose.classList.remove('ativo');
+        btnMenu.classList.add('ativo');
+        page.classList.add('open');
+        page.classList.remove('closed');
+    });
 
-const catalogo = document.getElementById('catalog');
-const catalogoPage = document.getElementById('catalog-page');
+    // Troca de páginas: basta adicionar um item aqui quando criar uma nova seção
+    const pages = [
+        { button: document.getElementById('orders'), section: document.getElementById('orders-page') },
+        { button: document.getElementById('catalog'), section: document.getElementById('catalog-page') }
+    ];
 
-pedidos.addEventListener('click', e => {
-    e.preventDefault();
+    pages.forEach(({ button, section }) => {
+        button.addEventListener('click', event => {
+            event.preventDefault();
 
-    pedidosPage.classList.add('show');
-    pedidosPage.classList.remove("show-off");
-    catalogoPage.classList.add('show-off');
-    catalogoPage.classList.remove('show');
-
-});
-
-catalogo.addEventListener('click', e => {
-    e.preventDefault();
-
-    pedidosPage.classList.add('show-off');
-    pedidosPage.classList.remove("show");
-    catalogoPage.classList.add('show');
-    catalogoPage.classList.remove('show-off');
-})
+            pages.forEach(item => {
+                const isCurrent = item.section === section;
+                item.section.classList.toggle('show', isCurrent);
+                item.section.classList.toggle('show-off', !isCurrent);
+            });
+        });
+    });
+}

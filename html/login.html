@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeCode</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/login.css">
 </head>
 <body id="home">
 
     <aside id="desktop-welcome">
-        <main id="welcome">
+        <div id="welcome">
             <div id="logo">
-                <img src="../logo.png" alt="BeCode">
+                <img src="../assets/logo.png" alt="BeCode">
                 <span>BeCode</span>
             </div>
             <div id="welcome-text">
                 <h2>Atendimento que gera conexões</h2>
-                <p>Catálogo, pedidos sob encomenda, agenda integrada com Google Calendar e atendimento 
+                <p>Catálogo, pedidos sob encomenda, agenda integrada com Google Calendar e atendimento
                 inteligente no WhatsApp — em um só lugar.</p>
                 <span id="bubbles-box">
                     <div class="bubbles">Agenda</div>
@@ -25,12 +26,12 @@
                 </span>
             </div>
             <p id="copy">&copy; 2026 BeCode</p>
-        </main>
+        </div>
     </aside>
 
     <!--Lado direito do site-->
-    <div id="forms-container">
-        <main id="forms" class="">
+    <main id="forms-container">
+        <div id="forms">
             <h2>Acesse sua conta</h2>
             <p>Gerencie pedidos e agendamentos</p>
 
@@ -58,8 +59,8 @@
                 <input type="password" name="password" id="password" placeholder="••••••••" required><br>
                 <button class="btn-submit" id="btn-create" type="submit">Criar conta</button>
             </form>
-        </main>
-    </div>
+        </div>
+    </main>
 
     <script type="module" src="../js/login.js"></script>
 </body>

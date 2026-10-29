@@ -1,0 +1,108 @@
+/* Página de agendamentos */
+.filter {
+    width: 35%;
+    height: 30px;
+    margin-top: 7px;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: var(--fundo-escuro);
+    border: solid 0.1px var(--texto);
+}
+
+#container-orders {
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#new-order {
+    background-color: var(--azul-primario);
+    border-radius: 8px;
+    border: none;
+    height: 45%;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#new-order:hover {
+    background-color: var(--azul-hover);
+    cursor: pointer;
+}
+
+#order-table {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: auto;
+}
+
+.plates {
+    background-color: var(--fundo-escuro);
+    border-radius: 8px;
+    width: 25%;
+    height: auto;
+    padding: 15px;
+    border: solid 2px var(--fundo-medio);
+}
+
+.btn-edit {
+    background-color: var(--azul-primario);
+    border: none;
+    border-radius: 8px;
+    width: 80px;
+    height: 35px;
+    margin-top: 15px;
+}
+
+.btn-edit:hover {
+    background-color: var(--azul-hover);
+    cursor: pointer;
+}
+
+.btn-delete {
+    border: none;
+    border-radius: 8px;
+    width: 80px;
+    height: 35px;
+    background-color: var(--vermelho);
+}
+
+.btn-delete:hover {
+    cursor: pointer;
+    background-color: var(--vermelho-hover);
+}
+
+.service {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status {
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 8px;
+    padding: 4px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 35%;
+    text-align: center;
+}
+
+.novo {
+    background-color: var(--azul-primario);
+    box-shadow: 0 0 10px var(--azul-primario);
+}
+
+.confirmado {
+    background-color: var(--verde);
+    box-shadow: 0 0 10px var(--verde);
+}
+
+.cancelado {
+    background-color: var(--vermelho);
+    box-shadow: 0 0 10px var(--vermelho);
+}

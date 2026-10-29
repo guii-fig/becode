@@ -1,0 +1,121 @@
+/* Home: botões de controle do menu */
+#btn-menu {
+    background-color: transparent;
+    border: none;
+    display: none;
+    margin-top: 20px;
+}
+
+#btn-menu.ativo {
+    display: grid;
+}
+
+#btn-menu:hover {
+    cursor: pointer;
+}
+
+#btn-close {
+    display: none;
+    background-color: transparent;
+    border: none;
+    transition: all 0.6s ease;
+    padding-top: 15px;
+}
+
+#btn-close.ativo {
+    display: grid;
+}
+
+#btn-close:hover {
+    cursor: pointer;
+}
+
+/* Menu lateral */
+#menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 5%;
+    height: 100vh;
+    background-color: var(--fundo-escuro);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+    justify-items: center;
+    border-right: solid 2px var(--fundo-medio);
+}
+
+#menu.ativo {
+    width: 15%;
+    height: 100vh;
+    justify-items: center;
+    transform: translateX(0);
+}
+
+#menu.ativo p {
+    font-size: 12px;
+    font-weight: lighter;
+}
+
+#menu nav {
+    margin-top: 60px;
+    font-size: 15px;
+}
+
+/* Informações do negócio */
+#bss-info {
+    display: none;
+    transition: all 1s ease;
+}
+
+#bss-info.ativo {
+    display: grid;
+    width: 87%;
+    margin-top: 10%;
+}
+
+/* Itens do menu */
+.options {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    align-content: center;
+    height: 30px;
+    padding: 5px;
+}
+
+.options:hover {
+    cursor: pointer;
+    background-color: var(--fundo-medio);
+    border-radius: 8px;
+}
+
+/* Área principal */
+#main-page {
+    height: auto;
+}
+
+.open {
+    position: fixed;
+    left: 10%;
+    top: 40px;
+    width: 85%;
+    height: 90vh;
+    border-radius: 10px;
+}
+
+.closed {
+    position: fixed;
+    left: 20%;
+    top: 40px;
+    width: 75%;
+    height: 90vh;
+    border-radius: 10px;
+}
+
+/* Alternância entre páginas das opções */
+.show {
+    display: block;
+}
+
+.show-off {
+    display: none;
+}
