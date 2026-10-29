@@ -1,5 +1,6 @@
-//classe que controla a exibição dos formulários de login
+// Controla quais botões e formulários de autenticação aparecem na página.
 export class LoginController {
+    // Guarda referências aos elementos HTML para que os métodos possam alterá-los.
     constructor(btnEntrar, btnCriar, formEntrar, formCriar, formContainer) {
         this.btnEntrar = btnEntrar;
         this.btnCriar = btnCriar;
@@ -8,7 +9,7 @@ export class LoginController {
         this.formContainer = formContainer;
     }
 
-    //método que mostra o formulário de Login
+    // Mostra o formulário de entrada e marca seu botão como selecionado.
     displayEntrar() {
         this.btnEntrar.classList.add('ativo');
         this.btnCriar.classList.remove('ativo');
@@ -17,7 +18,7 @@ export class LoginController {
         this.formContainer.classList.remove('ativo');
     }
 
-    //método que mostra o formulário SignIn
+    // Mostra o formulário de criação de conta e marca seu botão como selecionado.
     displayCriar() {
         this.btnCriar.classList.add('ativo');
         this.btnEntrar.classList.remove('ativo');

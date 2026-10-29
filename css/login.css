@@ -1,8 +1,9 @@
-/* Página de login */
+/* Organiza a página em uma área de boas-vindas e outra para os formulários. */
 #home {
     display: flex;
 }
 
+/* Painel de apresentação à esquerda, com fundo em degradê radial. */
 #desktop-welcome {
     width: 43%;
     height: 100vh;
@@ -11,12 +12,14 @@
     align-content: center;
 }
 
+/* Contêiner interno que mantém o conteúdo de boas-vindas alinhado. */
 #welcome {
     width: 90%;
     height: 90%;
     justify-content: center;
 }
 
+/* Alinha horizontalmente o logotipo e o nome da aplicação. */
 #logo {
     margin-top: 40px;
     width: 60%;
@@ -25,18 +28,21 @@
     align-items: center;
 }
 
+/* Mantém a imagem do logotipo em tamanho controlado e com cantos arredondados. */
 #logo img {
     width: 53px;
     height: 100%;
     border-radius: 10%;
 }
 
+/* Separa o texto do nome em relação ao ícone do logotipo. */
 #logo span {
     margin-left: 15px;
     font-size: 20px;
     font-weight: bold;
 }
 
+/* Área que apresenta a mensagem principal e os recursos do serviço. */
 #welcome-text {
     width: 80%;
     height: 30%;
@@ -45,11 +51,13 @@
     font-weight: lighter;
 }
 
+/* Destaca o título da mensagem de apresentação. */
 #welcome-text h2 {
     margin-bottom: 10px;
     font-size: 30px;
 }
 
+/* Distribui igualmente as etiquetas dos recursos apresentados. */
 #bubbles-box {
     display: flex;
     width: 100%;
@@ -57,6 +65,7 @@
     margin-top: 40px;
 }
 
+/* Aparência compartilhada por cada etiqueta de recurso. */
 .bubbles {
     width: 25%;
     padding: 5px;
@@ -67,13 +76,14 @@
     font-weight: normal;
 }
 
+/* Texto de direitos autorais no rodapé do painel de apresentação. */
 #copy {
     margin-top: 20%;
     font-size: 12px;
     font-weight: lighter;
 }
 
-/* Lado direito */
+/* Painel direito: centraliza o formulário sobre um fundo escuro. */
 #forms-container {
     width: 57%;
     height: 100vh;
@@ -82,6 +92,7 @@
     align-content: center;
 }
 
+/* Cartão que agrupa o título, a seleção e os formulários. */
 #forms {
     width: 50%;
     height: 70%;
@@ -91,15 +102,18 @@
     padding-top: 40px;
 }
 
+/* Reserva mais altura para o cartão quando o cadastro está aberto. */
 #forms.ativo {
     height: 90%;
 }
 
+/* Ajusta o peso e o espaçamento dos parágrafos dentro do cartão. */
 #forms p {
     font-weight: lighter;
     margin-top: 5px;
 }
 
+/* Barra que contém os botões para alternar entre login e cadastro. */
 #selection {
     width: 90%;
     height: 50px;
@@ -111,6 +125,7 @@
     border-radius: 8px;
 }
 
+/* Estilo base dos dois botões da barra de seleção. */
 .select-btn {
     width: 45%;
     height: 30px;
@@ -121,15 +136,17 @@
     transition: all 0.3s ease;
 }
 
+/* Indica que o botão pode ser selecionado. */
 .select-btn:hover {
     cursor: pointer;
 }
 
+/* Diferencia visualmente o botão da opção atualmente selecionada. */
 .select-btn.ativo {
     background-color: var(--fundo-escuro);
 }
 
-/* Formulários */
+/* Os formulários ficam ocultos por padrão; o JavaScript ativa um por vez. */
 .form {
     margin-top: 20px;
     width: 90%;
@@ -139,6 +156,7 @@
     display: none;
 }
 
+/* Campos de texto ocupam quase toda a largura disponível no formulário. */
 .form input {
     width: 95%;
     height: 30px;
@@ -150,10 +168,12 @@
     background-color: var(--fundo-escuro);
 }
 
+/* Exibe apenas o formulário que recebeu a classe ativo. */
 .form.ativo {
     display: block;
 }
 
+/* Aparência principal dos botões que enviam os formulários. */
 .btn-submit {
     width: 97%;
     height: 53px;
@@ -164,11 +184,13 @@
     margin-top: 30px;
 }
 
+/* Escurece o botão ao passar o cursor para indicar interação. */
 .btn-submit:hover {
     cursor: pointer;
     background-color: var(--azul-hover);
 }
 
+/* Em telas estreitas, oculta a apresentação e amplia o formulário para a tela toda. */
 @media screen and (max-width: 1025px) {
     #desktop-welcome {
         display: none;

@@ -1,5 +1,6 @@
-// Controla a alternância visual entre o formulário de login e o de criar conta
+// Esta classe concentra as mudanças visuais entre entrar na conta e criar uma conta.
 export class FormToggle {
+    // O construtor recebe os elementos da página que serão atualizados pelos métodos.
     constructor(btnEntrar, btnCriar, formEntrar, formCriar, formContainer) {
         this.btnEntrar = btnEntrar;
         this.btnCriar = btnCriar;
@@ -8,6 +9,7 @@ export class FormToggle {
         this.formContainer = formContainer;
     }
 
+    // Ativa o botão e o formulário de login e esconde o formulário de cadastro.
     showLogin() {
         this.btnEntrar.classList.add('ativo');
         this.btnCriar.classList.remove('ativo');
@@ -16,6 +18,7 @@ export class FormToggle {
         this.formContainer.classList.remove('ativo');
     }
 
+    // Faz o inverso de showLogin: exibe o cadastro e ajusta o tamanho do contêiner.
     showSignUp() {
         this.btnCriar.classList.add('ativo');
         this.btnEntrar.classList.remove('ativo');

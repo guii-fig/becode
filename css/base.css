@@ -1,5 +1,7 @@
+/* Carrega a família de fontes Montserrat pela internet para usar no restante do site. */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Variáveis CSS guardam valores reutilizáveis, facilitando manter as cores consistentes. */
 :root {
     --azul-primario: #1c6be2;
     --azul-hover: #163a74;
@@ -21,7 +23,7 @@
     list-style: none;
 }
 
-/* Fonte e cor ficam no body e são herdadas pelos elementos */
+/* Define o visual padrão da página; fonte e cor são herdadas por muitos elementos. */
 body {
     background-color: var(--fundo-card);
     font-family: "Montserrat", sans-serif;
@@ -30,7 +32,7 @@ body {
     color: var(--texto);
 }
 
-/* Controles de formulário não herdam fonte/cor por padrão */
+/* Faz os controles de formulário usarem a mesma fonte e cor do restante da página. */
 button,
 input,
 select {

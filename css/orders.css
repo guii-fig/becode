@@ -1,4 +1,4 @@
-/* Página de agendamentos */
+/* Campos usados para pesquisar e filtrar os agendamentos. */
 .filter {
     width: 35%;
     height: 30px;
@@ -10,6 +10,7 @@
     border: solid 0.1px var(--texto);
 }
 
+/* Alinha o título e a ação de criar agendamento na mesma linha. */
 #container-orders {
     height: 90px;
     display: flex;
@@ -17,6 +18,7 @@
     align-items: center;
 }
 
+/* Botão para iniciar a criação de um agendamento. */
 #new-order {
     background-color: var(--azul-primario);
     border-radius: 8px;
@@ -27,11 +29,13 @@
     font-weight: bold;
 }
 
+/* Muda a cor do botão quando o cursor está sobre ele. */
 #new-order:hover {
     background-color: var(--azul-hover);
     cursor: pointer;
 }
 
+/* Organiza os cartões de agendamento lado a lado. */
 #order-table {
     display: flex;
     align-items: center;
@@ -39,6 +43,7 @@
     height: auto;
 }
 
+/* Cada cartão apresenta os dados e as ações de um agendamento. */
 .plates {
     background-color: var(--fundo-escuro);
     border-radius: 8px;
@@ -48,6 +53,7 @@
     border: solid 2px var(--fundo-medio);
 }
 
+/* Botão de ação para alterar os dados do agendamento. */
 .btn-edit {
     background-color: var(--azul-primario);
     border: none;
@@ -57,11 +63,13 @@
     margin-top: 15px;
 }
 
+/* Destaca o botão de edição durante a interação. */
 .btn-edit:hover {
     background-color: var(--azul-hover);
     cursor: pointer;
 }
 
+/* Botão para cancelar o agendamento. */
 .btn-delete {
     border: none;
     border-radius: 8px;
@@ -70,17 +78,20 @@
     background-color: var(--vermelho);
 }
 
+/* Indica que o botão de cancelamento é clicável e destaca sua ação. */
 .btn-delete:hover {
     cursor: pointer;
     background-color: var(--vermelho-hover);
 }
 
+/* Mantém o nome do serviço e seu status alinhados na mesma linha. */
 .service {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+/* Aparência comum para o rótulo do status do agendamento. */
 .status {
     font-weight: bold;
     font-size: 12px;
@@ -92,6 +103,7 @@
     text-align: center;
 }
 
+/* Cada classe de status usa uma cor para facilitar a identificação visual. */
 .novo {
     background-color: var(--azul-primario);
     box-shadow: 0 0 10px var(--azul-primario);

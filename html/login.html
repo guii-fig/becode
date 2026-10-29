@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- Define a codificação e permite que a página se ajuste ao tamanho da tela. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BeCode</title>
+    <!-- Carrega primeiro as regras gerais e depois as regras próprias do login. -->
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/login.css">
 </head>
 <body id="home">
 
+    <!-- Apresentação lateral, escondida em telas menores pelo CSS. -->
     <aside id="desktop-welcome">
         <div id="welcome">
             <div id="logo">
@@ -29,7 +32,7 @@
         </div>
     </aside>
 
-    <!--Lado direito do site-->
+    <!-- Área dos formulários de login e criação de conta. -->
     <main id="forms-container">
         <div id="forms">
             <h2>Acesse sua conta</h2>
@@ -39,7 +42,7 @@
                 <button id="login" class="select-btn ativo">Login</button>
                 <button id="create-account" class="select-btn">Criar Conta</button>
             </div>
-            <!--Formulário de login-->
+            <!-- Campos de acesso: required pede ao navegador que valide o preenchimento. -->
             <form id="form-login" class="form ativo">
                 <label for="email-login" class="label-form">Email</label><br>
                 <input type="email" name="email-login" id="email-login" placeholder="voce@empresa.com" required><br>
@@ -47,7 +50,7 @@
                 <input type="password" name="password-login" id="password-login" placeholder="••••••••" required><br>
                 <button class="btn-submit" id="btn-login" type="submit">Entrar</button>
             </form>
-            <!--Formulário para criar conta-->
+            <!-- Campos para cadastrar o negócio e a primeira conta de usuário. -->
             <form id="form-create" class="form">
                 <label for="bss-name" class="label-form">Nome do negócio</label><br>
                 <input type="text" name="bss-name" id="bss-name" placeholder="Barbearia do João" required><br>
@@ -62,6 +65,7 @@
         </div>
     </main>
 
+    <!-- O módulo liga os formulários à lógica de cadastro e autenticação. -->
     <script type="module" src="../js/login.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-/* Home: botões de controle do menu */
+/* Botão para abrir o menu: fica escondido até receber a classe que o ativa. */
 #btn-menu {
     background-color: transparent;
     border: none;
@@ -10,6 +10,7 @@
     display: grid;
 }
 
+/* O cursor de mão indica que o botão pode ser clicado. */
 #btn-menu:hover {
     cursor: pointer;
 }
@@ -22,6 +23,7 @@
     padding-top: 15px;
 }
 
+/* Mostra o botão de fechar somente quando o menu está aberto. */
 #btn-close.ativo {
     display: grid;
 }
@@ -30,7 +32,7 @@
     cursor: pointer;
 }
 
-/* Menu lateral */
+/* Mantém o menu preso à lateral da janela e visível durante a rolagem. */
 #menu {
     position: fixed;
     top: 0;
@@ -44,6 +46,7 @@
     border-right: solid 2px var(--fundo-medio);
 }
 
+/* A classe ativo alarga o menu e o posiciona em sua posição aberta. */
 #menu.ativo {
     width: 15%;
     height: 100vh;
@@ -56,24 +59,26 @@
     font-weight: lighter;
 }
 
+/* Espaça os links de navegação abaixo das informações do negócio. */
 #menu nav {
     margin-top: 60px;
     font-size: 15px;
 }
 
-/* Informações do negócio */
+/* As informações e opções ficam ocultas enquanto o menu está recolhido. */
 #bss-info {
     display: none;
     transition: all 1s ease;
 }
 
+/* Ao abrir o menu, exibe o nome do negócio e seus links. */
 #bss-info.ativo {
     display: grid;
     width: 87%;
     margin-top: 10%;
 }
 
-/* Itens do menu */
+/* Espaçamento e tamanho comuns para cada item da navegação. */
 .options {
     margin-top: 5px;
     margin-bottom: 5px;
@@ -82,17 +87,19 @@
     padding: 5px;
 }
 
+/* Realça o item sob o cursor para mostrar que ele é interativo. */
 .options:hover {
     cursor: pointer;
     background-color: var(--fundo-medio);
     border-radius: 8px;
 }
 
-/* Área principal */
+/* A área principal contém as telas exibidas ao lado do menu. */
 #main-page {
     height: auto;
 }
 
+/* Posição e largura da área quando o menu está recolhido. */
 .open {
     position: fixed;
     left: 10%;
@@ -102,6 +109,7 @@
     border-radius: 10px;
 }
 
+/* Abre espaço para o menu quando ele está expandido. */
 .closed {
     position: fixed;
     left: 20%;
@@ -111,7 +119,7 @@
     border-radius: 10px;
 }
 
-/* Alternância entre páginas das opções */
+/* Classes usadas pelo JavaScript para alternar qual seção está visível. */
 .show {
     display: block;
 }
